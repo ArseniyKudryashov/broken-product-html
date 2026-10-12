@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Переговорки — запит на бронювання</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Переговорки</a>
+      <nav class="nav" aria-label="Головна навігація">
+        <ul>
+          <li><a href="index.html">Кімнати</a></li>
+          <li><a href="request.html" aria-current="page">Запит</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Запит на бронювання</h1>
+    <p class="muted">Після надсилання дані з'являться в адресному рядку — це навмисно (method="get"), щоб їх було видно.</p>
+    <form action="request.html" method="get" class="request-form">
+      <div class="field">
+        <label for="room">Кімната</label>
+        <select id="room" name="room">
+          <option value="A">A — 4 місця</option>
+          <option value="B">B — 10 місць</option>
+          <option value="C">C — 6 місць</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="date">Дата</label>
+        <input id="date" name="date" type="date" required>
+      </div>
+      <div class="field">
+        <label for="time">Час початку</label>
+        <input id="time" type="time" required>
+      </div>
+      <div class="field">
+        <label for="who">Хто бронює</label>
+        <input id="who" name="who" type="text" required>
+      </div>
+      <button class="btn" type="submit">Надіслати запит</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Переговорки, демо для тижня 6</p>
+  </footer>
+</body>
+</html>

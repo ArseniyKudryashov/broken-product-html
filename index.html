@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Переговорки — демо</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Переговорки</a>
+      <nav class="nav" aria-label="Головна навігація">
+        <ul>
+          <li><a href="index.html" aria-current="page">Кімнати</a></li>
+          <li><a href="request.html">Запит</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Вільні кімнати сьогодні</h1>
+      <p>Оберіть мінімальну кількість місць — список оновиться.</p>
+      <div class="filter">
+        <label for="min-seats">Мінімум місць</label>
+        <select id="min-seats">
+          <option value="0">будь-яка</option>
+          <option value="4">від 4</option>
+          <option value="6">від 6</option>
+          <option value="10">від 10</option>
+        </select>
+        <button id="apply" class="btn" type="button">Показати</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="rooms-title">
+      <h2 id="rooms-title">Кімнати</h2>
+      <ul id="rooms" class="rooms"></ul>
+      <p id="empty" class="muted" hidden>Немає кімнат з такою місткістю.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Переговорки, демо для тижня 6</p>
+  </footer>
+</body>
+</html>
